@@ -4,8 +4,6 @@ Ushbu loyiha `NestJS` asosida qurilgan REST API bo‘lib, autentifikatsiya, foyd
 
 ## 📌 Loyixa haqida qisqacha ma'lumot
 
-Loyihada autentifikatsiya (`login`, `register`, `refresh`, `logout`), tokenlarni boshqarish, foydalanuvchini yangilash (`updateMe`), va parolni tiklash (`forgot-password`, `reset-password`) imkoniyatlari mavjud.
-
 Strukturaviy jihatdan loyixa imkon qadar microservicelarga bo‘lingan. Har bir modul o‘z vazifasi bilan chegaralangan. Loyixada `common` papkasi orqali umumiy foydalaniladigan komponentlar (guard, interceptor, filter, type, interface, config va h.k.) saqlanadi.
 
 Parol ni bazaga bcrypt orqali heshlab saqladim bu esa havfsizlik uchun 
