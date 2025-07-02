@@ -3,7 +3,7 @@ USER UCHUN API LAR
 
 1
 
-Post => http://localhost:4000/auth/register 
+Post => https://todo-api-q9q5.onrender.com/auth/register 
 foydalanuvchi registrasiyadan o'tishi uchun , agar allaqachon o'tgan bo'lsa xatolik qaytariladi,dto ham yozilgan 
 
 body dan yuborish uchun 
@@ -34,7 +34,7 @@ Test uchun 3 ta user qo'shamiz
 
 2.
 
-Post => http://localhost:4000/auth/login
+Post => https://todo-api-q9q5.onrender.com/auth/login
 
 Body dan yuborish 
 {
@@ -48,14 +48,14 @@ Bu refresh deb alohida api chiqarishni oldini oladi yani ishimiz kamayadi
 
 3
 
-Get => http://localhost:4000/auth/me
+Get => https://todo-api-q9q5.onrender.com/auth/me
 
 Bu acces token orqali bizning malumotlarimizni olib beradi
 
 
 4
 
-Put => http://localhost:4000/auth/login
+Put => https://todo-api-q9q5.onrender.com/auth/login
 
 Body dan yuborish uchun
 
@@ -71,7 +71,7 @@ Bu sorovda biz profilimizni update qilsak boladi, dto da hammasi optional yani h
 
 5
 
-Post => http://localhost:4000/tasks
+Post => https://todo-api-q9q5.onrender.com/tasks
 
 Foydalanuvchi task yaratishi uchun , authGuard bilan himoyalangan,oldin login qilib olishi shart
 
@@ -85,7 +85,7 @@ Body dan yuborish uchun
 
 6
 
-Get =>  http://localhost:4000/tasks
+Get =>  https://todo-api-q9q5.onrender.com/tasks
 
 Foydalanuvchining barcha tasklarini olib beradi
 
@@ -94,7 +94,7 @@ Foydalanuvchining barcha tasklarini olib beradi
 
 7
 
-Get  => http://localhost:4000/auth/logout
+Get  => https://todo-api-q9q5.onrender.com/auth/logout
 
 tizimdan chiqish uchun api, refresh va access tokenlarni cookiedan o'chirib yuboradi
 
@@ -102,9 +102,14 @@ tizimdan chiqish uchun api, refresh va access tokenlarni cookiedan o'chirib yubo
 
 SUPERADMIN UCHUN API LAR
 
-Eslatma: Bu sorovdan oldin super-admin login qilib olishi kerak
+Eslatma: Bu sorovdan oldin super-admin login qilib olishi kerak 
 
-Patch => http://localhost:4000/super-admin/id  
+{
+    "email":"tohirjonmuqimov79@gmail.com",
+    "password":"1234"
+}
+
+Patch => https://todo-api-q9q5.onrender.com/super-admin/id  
 id idli userni ADMIN roliga tayinlash uchun , faqat SUPERADMIN bajara oladi
 
 
@@ -115,18 +120,18 @@ Eslatma: Bu sorovlardan oldin admin login qilib olishi kerak
 
 1
 
-GET => http://localhost:4000/admin/users 
+GET => https://todo-api-q9q5.onrender.com/admin/users 
 tizimdagi barcha userlarni olib beradi , Admin va superadmin bajara oladi
 
 
 2
 
-GET => http://localhost:4000/admin/users/id
+GET => https://todo-api-q9q5.onrender.com/admin/users/id
 id idli foydalanuvchini olib beradi
 
 3
 
-Patch  => http://localhost:4000/admin/users/id
+Patch  => https://todo-api-q9q5.onrender.com/admin/users/id
 Bu api userni id si orqali qidirib userning parolini o'zgartirib beradi
 
 Bodydan yuborish uchun
@@ -138,6 +143,6 @@ Bodydan yuborish uchun
 4
 
 
-Delete   => http://localhost:4000/admin/users/id
+Delete   => https://todo-api-q9q5.onrender.com/admin/users/id
 
 id idli userni bazadan o'chirib yuboradi
